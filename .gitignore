@@ -1,0 +1,10 @@
+# Generated lesson outputs — staged here, then copied to the site. Not source.
+build/
+
+# Local-only config (e.g. secrets like LEARN_TOKEN)
+.env
+.env.local
+
+# Node / OS cruft
+node_modules/
+.DS_Store

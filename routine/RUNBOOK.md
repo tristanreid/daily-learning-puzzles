@@ -1,0 +1,60 @@
+# Weekly generation runbook
+
+The versioned procedure the scheduled routine follows. The local scheduled-task
+config (`~/.claude/scheduled-tasks/learn-puzzle-generator/SKILL.md`) is a thin
+wrapper that points here and supplies the secret `LEARN_TOKEN`; that token is
+**never** committed to this public repo.
+
+## Paths
+- **REPO** (this repo): `/Users/tristanreid/projects/github.com/tristanreid/daily-learning-puzzles`
+- **SITE** (deploy target Hugo repo): `/Users/tristanreid/projects/github.com/tristanreid/tristancode-workspace`
+
+## Command rules (keep the run hands-off)
+One simple command per Bash call — no `cd`, no `&&` chains, no wrapper scripts
+(those defeat the permission allow-list). Use `git -C <path> <subcmd>`, absolute
+paths, `cp`, `curl`, `mise exec`, and the Read/Write/Edit file tools.
+
+## Steps
+1. **Sync both repos:**
+   - `git -C REPO pull --ff-only`
+   - `git -C SITE checkout main` then (separate call) `git -C SITE pull --ff-only`
+2. **Read the source of truth** (file tools, in REPO):
+   - `curriculum/curriculum.md` — the ordered spine; continue from `last_generated_lesson`.
+   - `generation/generation-prompt.md` — the lesson-authoring spec (front-matter schema + rules).
+   - `generation/feedback.md` — apply ALL feedback; "re-run this week" → regenerate the most
+     recent UNSOLVED lessons in place instead of appending.
+3. **Learner progress** `L`: `curl -s "https://tristancode.com/api/progress?token=$LEARN_TOKEN"`
+   → `{"lastCompleted": N}` (use 0 if it fails).
+4. **Highest published lesson** `P` = max `lesson_number` across `SITE/content/learn/*-puzzle.md`
+   (Grep/Read). Compute `buffer = P - L`.
+5. If `buffer >= 12`: report "buffer >= 12 (P=…, L=…) — nothing to generate" and stop. No changes.
+6. Otherwise author exactly `12 - buffer` new lessons, numbered `P+1…`, each a puzzle+solution
+   markdown PAIR written with the Write tool into `REPO/build/lessons/` (this dir is gitignored
+   scratch). Follow `generation/generation-prompt.md` exactly; take concepts in order from
+   `curriculum/curriculum.md`; honor the difficulty ramp in `generation/feedback.md`.
+7. **Update the marker:** in `REPO/curriculum/curriculum.md`, mark the new items `[x]` and set
+   `last_generated_lesson` to the new highest number (Edit tool).
+8. **Copy into the site:** for each new file, `cp REPO/build/lessons/<name>.md SITE/content/learn/`
+   (copy exactly the files you created this run).
+9. **Verify the site build:**
+   - `mise exec hugo@0.155.2 -- hugo --minify --source SITE` (must succeed)
+   - `python3 SITE/scripts/check-internal-links.py` (must pass)
+   Fix anything broken and re-verify.
+10. **Publish lessons** (Netlify auto-deploys):
+    - `git -C SITE add -A`
+    - `git -C SITE commit -m "Add learn lessons NNNN–MMMM (<concepts>)"` (no spoilers in the message)
+    - `git -C SITE push origin main`
+11. **Persist the marker** so the next run continues correctly:
+    - `git -C REPO add -A`
+    - `git -C REPO commit -m "Advance curriculum to lesson NNNN"`
+    - `git -C REPO push origin main`
+
+## Constraints
+- Never modify or regenerate a lesson at or below `L` unless feedback says to re-run the week.
+- Never generate more than needed to reach a buffer of 12.
+- The token is private; never write it into any file under this repo.
+
+## Done when
+`buffer >= 12` after the run (or already was); the Hugo build + link check pass; new lessons pushed
+to SITE; the curriculum marker pushed to REPO. Report the lesson numbers + concepts, or that nothing
+was needed.
