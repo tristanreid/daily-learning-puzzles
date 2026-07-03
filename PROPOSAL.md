@@ -1,8 +1,10 @@
 # Proposal: multi-track, interactive, adaptive learning puzzles
 
-*Drafted 2026-07-02. Status: decisions resolved; **Phase 1 implemented 2026-07-02** (de-Bend
-reframe, `numeric` + `estimate` answer types, "Go deeper" resources, one-tap difficulty rating,
-outcome logging in the v2 progress blob). Phases 2–4 not started.*
+*Drafted 2026-07-02. Status: decisions resolved; **Phases 1 and 2 implemented 2026-07-02**
+(Phase 1: de-Bend reframe, `numeric` + `estimate` answer types, "Go deeper" resources, one-tap
+difficulty rating, outcome logging. Phase 2: multi-track architecture — per-track curricula,
+URLs, progress (v3 record), resume cards, per-track runbook with buffer 8 — and the Bayes track
+launched with lessons 1–8). Phases 3–4 not started.*
 
 This proposes the next evolution of the daily-learning-puzzles system, addressing four things:
 

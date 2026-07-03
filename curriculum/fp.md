@@ -1,4 +1,6 @@
-# Puzzle Curriculum — the spine (track: functional & parallel thinking)
+# Track spine: `fp` — Functional & parallel thinking
+
+Lessons in this track live at `/learn/fp/` (front matter `track: fp`).
 
 This is the ordered concept map the weekly generator follows. It teaches **functional & parallel
 thinking** — the ideas that make Haskell, Spark, MapReduce, and GPU kernels tick — in the abstract,

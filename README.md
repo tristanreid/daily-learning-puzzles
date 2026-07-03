@@ -1,11 +1,11 @@
 # daily-learning-puzzles
 
-A self-paced daily/weekly puzzle path for practicing **ways of thinking** — starting with
-functional & parallel thinking: pure functions, recursion, higher-order functions, closures,
-algebraic data types, pattern matching, folds, continuations, and the `map`/`reduce`/`scan`
-reasoning behind Spark, MapReduce, and GPU programming. Further tracks (Bayesian statistics,
-machine learning) are planned — see [`PROPOSAL.md`](PROPOSAL.md). It publishes to the **`/learn/`**
-section of [tristancode.com](https://tristancode.com/learn/).
+A self-paced daily/weekly puzzle path for practicing **ways of thinking**, organized into
+**tracks**: `fp` (functional & parallel thinking — pure functions, recursion, folds, and the
+`map`/`reduce`/`scan` reasoning behind Spark and GPU programming) and `bayes` (Bayesian
+statistics — conditioning, Bayes' theorem, priors/posteriors, calibration). A machine-learning
+track is planned — see [`PROPOSAL.md`](PROPOSAL.md). It publishes to the **`/learn/`** section of
+[tristancode.com](https://tristancode.com/learn/).
 
 This repo is the **single source of truth** for the whole system. The lessons that appear on the site
 are treated as build *outputs*: a generator writes them into a gitignored `build/` dir, and a publish
@@ -15,8 +15,8 @@ step copies them into the website repo, which Netlify deploys.
 
 ```
 curriculum/
-  curriculum.md          # the ordered concept "spine" + the last_generated_lesson marker
-  roadmap.md             # (stub) longer-horizon plan the curriculum serves
+  fp.md, bayes.md        # one ordered concept "spine" per track + its last_generated_lesson marker
+  roadmap.md             # cross-track plan: active tracks, buffer policy, capstones, pacing
 generation/
   generation-prompt.md   # how to author a good lesson: front-matter schema + hard rules
   feedback.md            # your feedback log; the routine applies it each run
@@ -43,9 +43,10 @@ build/lessons/           # generated lessons land here (gitignored, not source)
 - **Progress** ("which lesson am I on") is stored in **Netlify Blobs**, keyed by a private token that
   lives in your bookmarkable `…/learn/?u=<token>` URL. Read/written via `/api/progress`
   (`web/netlify/functions/progress.mjs`). Cross-device, no login.
-- **The weekly routine** (a scheduled Claude Code task) follows `routine/RUNBOOK.md`: it keeps at
-  least **12 unsolved lessons ahead** of your current spot, generating a batch, copying it to the
-  site, and pushing — never running further ahead than that, so your feedback always lands first.
+- **The weekly routine** (a scheduled Claude Code task) follows `routine/RUNBOOK.md`: per active
+  track it keeps at least **8 unsolved lessons ahead** of your current spot, generating a batch,
+  copying it to the site, and pushing — never running further ahead than that, so your feedback
+  always lands first.
 
 ## Common tasks
 
@@ -64,8 +65,9 @@ scripts/publish.sh "Add learn lessons NNNN–MMMM (concepts)"
 ## Giving feedback
 
 Append notes to [`generation/feedback.md`](generation/feedback.md); the routine reads the whole file
-each run and adjusts. To change *what/how* lessons are made, edit `curriculum/curriculum.md` and
-`generation/generation-prompt.md`. To change *when/how* the routine runs, edit its local
+each run and adjusts. To change *what/how* lessons are made, edit the track spine
+(`curriculum/<track>.md`), `curriculum/roadmap.md`, and `generation/generation-prompt.md`. To
+change *when/how* the routine runs, edit its local
 scheduled-task config (the routine's steps are mirrored in `routine/RUNBOOK.md`).
 
 ## Secrets

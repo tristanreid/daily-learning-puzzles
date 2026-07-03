@@ -2,10 +2,13 @@
 
 How to author a good lesson. This is the *content* spec — the operational run procedure (sync,
 buffer math, publish) lives in [`../routine/RUNBOOK.md`](../routine/RUNBOOK.md), and the ordered
-concepts live in [`../curriculum/curriculum.md`](../curriculum/curriculum.md).
+concepts live per track in `../curriculum/<track>.md` (active tracks are listed in
+[`../curriculum/roadmap.md`](../curriculum/roadmap.md)).
 
-A **lesson** = one puzzle page **and** its solution page. When generating, write both files into
-`build/lessons/` (gitignored scratch); the routine copies them to the site.
+A **lesson** = one puzzle page **and** its solution page, belonging to exactly one **track**
+(`fp`, `bayes`, …). When generating, write both files into `build/lessons/<track>/` (gitignored
+scratch); the routine copies them to the site under `content/learn/<track>/`. Lesson numbers are
+**per track** — each track starts at 1 and counts independently.
 
 ## Hard rules for a good lesson
 
@@ -48,14 +51,15 @@ Distill.pub, free textbook sites) over blog posts.
 
 ## File + front-matter schema
 
-Two files per lesson, zero-padded to 4 digits, written to `build/lessons/`:
+Two files per lesson, zero-padded to 4 digits, written to `build/lessons/<track>/`:
 
-`build/lessons/NNNN-puzzle.md`
+`build/lessons/<track>/NNNN-puzzle.md`
 ```yaml
 ---
 title: "Short puzzle title"
 description: "One-sentence summary for SEO/cards."
-lesson_number: N                # integer, matches the filename
+lesson_number: N                # integer, matches the filename; numbering is PER TRACK
+track: fp                       # REQUIRED: the track id (fp, bayes, …)
 concept: "Pure functions"       # short concept label (shown in eyebrow/archive)
 stage: 0                        # curriculum stage number
 layout: puzzle                  # selects layouts/learn/puzzle.html
@@ -83,12 +87,13 @@ estimate:                       # ONLY when answer_type: estimate
 Puzzle body in Markdown. Define every term. Pose one clear challenge.
 ```
 
-`build/lessons/NNNN-solution.md`
+`build/lessons/<track>/NNNN-solution.md`
 ```yaml
 ---
 title: "Solution: same/related title"
 description: "One-sentence summary."
 lesson_number: N                # MUST equal the puzzle's number (pairs them)
+track: fp                       # MUST equal the puzzle's track
 concept: "Pure functions"
 stage: 0
 layout: solution                # selects layouts/learn/solution.html
@@ -106,9 +111,11 @@ forward hook to what it sets up.
 ```
 
 Notes:
-- Templates pair a puzzle with its solution by matching `lesson_number` — keep them equal, and keep
-  the filename's number in sync.
-- Ordering, the resume button, and the buffer math all key off `lesson_number`.
+- Templates pair a puzzle with its solution by matching (`track`, `lesson_number`) — keep both
+  equal across the pair, and keep the filename's number in sync.
+- Ordering, the resume buttons, and the buffer math all key off `lesson_number` within a track.
+- `builds_on` refers to lesson numbers **within the same track** only. Cross-track connections go
+  in prose ("if you did the fp track, this rhymes with folds"), never in `builds_on`.
 - Include ONLY the block matching `answer_type` (`mcq:`, `numeric:`, or `estimate:`); for `reveal`
   omit all three (the solution link shows immediately). For `mcq`/`numeric`, the solution link
   unlocks on a correct answer (numeric also unlocks after three misses); for `estimate`, on lock-in.
