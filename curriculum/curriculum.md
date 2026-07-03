@@ -1,9 +1,9 @@
-# Puzzle Curriculum — the spine
+# Puzzle Curriculum — the spine (track: functional & parallel thinking)
 
-This is the ordered concept map the weekly generator follows. It teaches the ideas behind the **Bend**
-language (massively parallel, pure-functional) *in the abstract* — not Bend's syntax. Concrete
-languages appear only when they illuminate a concept, and are always explained enough that an
-experienced developer who has never seen them can follow.
+This is the ordered concept map the weekly generator follows. It teaches **functional & parallel
+thinking** — the ideas that make Haskell, Spark, MapReduce, and GPU kernels tick — in the abstract,
+not any one language's syntax. Concrete languages appear only when they illuminate a concept, and
+are always explained enough that an experienced developer who has never seen them can follow.
 
 ## Audience
 
@@ -27,13 +27,18 @@ several lessons in a day, so the path must stay correct and well-ordered rather 
 6. **Solution teaches.** The solution page fully explains the concept, the *why*, common pitfalls,
    and a forward hook ("this is the seed of folds, coming up").
 7. **Connect to the through-line** when natural: purity + immutability + associativity are what make
-   work safely parallelizable (Bend's "no threads, locks, mutexes, atomics").
+   work safely parallelizable — no threads, locks, mutexes, or atomics needed. Spark, MapReduce,
+   GPU kernels, and languages like Bend are all expressions of this one idea; cite whichever
+   illuminates, none as the destination.
 
 ## Answer types (pick the best fit per lesson)
 
-- `reveal` — think/sketch, then reveal the solution. Best for "write this function" puzzles.
-- `mcq` — multiple choice, client-checked. Best for "which of these is X / predict the result".
-- `code` — in-browser runnable check. **Not built yet** (Phase D). Don't use until tooling exists.
+- `reveal` — think/sketch, then reveal the solution. For "write this function" puzzles.
+- `mcq` — multiple choice, client-checked. For "which of these is X / predict the result".
+- `numeric` — type a number, checked with tolerance. For counting/complexity/work-span questions.
+- `estimate` — point estimate + 90% interval, logged for calibration. For quantity questions with
+  a true value worth being calibrated about.
+- `code` — in-browser runnable check (Pyodide). **Not built yet.** Don't use until tooling exists.
 
 ## The stages (ordered)
 
@@ -87,16 +92,19 @@ several lessons in a day, so the path must stay correct and well-ordered rather 
 - [ ] Early exit / escape via continuations
 - [ ] (Optional) callbacks → CPS → why async looks the way it does
 
-### Stage 7 — Parallel combinators & cost models  ← the Bend payoff
+### Stage 7 — Parallel combinators & cost models  ← the payoff
 - [ ] `map` is embarrassingly parallel (independent work)
 - [ ] Associativity & monoids: why `reduce` can split a list into a tree of work
 - [ ] `foldl` vs `reduce`: sequential dependency vs parallel reduction (span)
 - [ ] **Work vs span**: total operations vs critical-path depth
 - [ ] `scan` (prefix sums) — the surprisingly-parallel running total
 - [ ] `any`/`all`/`scatter`; flattening nested `map`s into one kernel
-- [ ] Re-derive an earlier sequential solution as map/reduce/scan
+- [ ] **Capstone:** re-derive an earlier sequential solution as map/reduce/scan (with a
+      work/span analysis) — this ends the track's spine
 
-### Stage 8 — Affine / once-use thinking (Bend-specific)
+### Optional branch — affine / once-use thinking (opt-in, not part of the spine)
+
+Only generate these if the learner asks for them via `generation/feedback.md`.
 - [ ] Linear/affine variables: use each value once; copying is explicit
 - [ ] Where sharing & duplication actually live; why it matters for a parallel runtime
 - [ ] Interaction-nets intuition (very light): computation as local graph rewriting

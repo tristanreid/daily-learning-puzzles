@@ -1,9 +1,11 @@
 # daily-learning-puzzles
 
-A self-paced daily/weekly puzzle path that teaches the ideas behind the **Bend** language *in the
-abstract* — pure functions, recursion, higher-order functions, closures, algebraic data types,
-pattern matching, folds, continuations, and the `map`/`reduce`/`scan` thinking that makes code
-parallelizable. It publishes to the **`/learn/`** section of [tristancode.com](https://tristancode.com/learn/).
+A self-paced daily/weekly puzzle path for practicing **ways of thinking** — starting with
+functional & parallel thinking: pure functions, recursion, higher-order functions, closures,
+algebraic data types, pattern matching, folds, continuations, and the `map`/`reduce`/`scan`
+reasoning behind Spark, MapReduce, and GPU programming. Further tracks (Bayesian statistics,
+machine learning) are planned — see [`PROPOSAL.md`](PROPOSAL.md). It publishes to the **`/learn/`**
+section of [tristancode.com](https://tristancode.com/learn/).
 
 This repo is the **single source of truth** for the whole system. The lessons that appear on the site
 are treated as build *outputs*: a generator writes them into a gitignored `build/` dir, and a publish
@@ -24,7 +26,7 @@ web/                     # website-facing SOURCE, synced into the Hugo site
   layouts/learn/*.html   #   section templates (list / puzzle / solution)
   layouts/partials/*.html#   builds-on backlinks, lesson-index data
   css/learn.css          #   all .learn-* styles (loaded site-wide by the theme)
-  js/learn.js            #   progress sync, resume, "create bookmark", MCQ, "start from here"
+  js/learn.js            #   progress sync, resume, answer checks (mcq/numeric/estimate), ratings
   netlify/functions/progress.mjs   # progress backend (Netlify Blobs)
 scripts/
   config.sh              # WORKSPACE path (the site repo); no secrets
