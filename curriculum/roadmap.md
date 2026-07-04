@@ -9,12 +9,12 @@ lessons. The weekly routine reads **Active tracks** below to know what to genera
 |---|---|---|---|
 | `fp` | Functional & parallel thinking | [`fp.md`](fp.md) | active — Stages 0–5 mostly generated; spine ends at the Stage 7 capstone |
 | `bayes` | Bayesian statistics | [`bayes.md`](bayes.md) | active — launched 2026-07 |
+| `cog` | Cognitive science & AI architectures | [`cog.md`](cog.md) | active — launched 2026-07; blackboard/Hearsay-II material is a first-class destination |
+| `ml` | Machine learning | [`ml.md`](ml.md) | active — launched 2026-07 (moved up from Phase 4 by request) |
 
-Planned, not yet active:
-
-| id | name | notes |
-|---|---|---|
-| `ml` | Machine learning | launches in Phase 4 (see `../PROPOSAL.md` Part 3 for the drafted spine) |
+With four active tracks the steady state is up to 32 unsolved lessons. If that outpaces solving,
+deactivate a track by moving its row out of this table (the routine only generates for rows here),
+or lower the buffer in the policy below via `../generation/feedback.md`.
 
 ## Buffer policy
 
@@ -28,6 +28,8 @@ before lessons are written). One weekly run covers all active tracks.
 - **bayes** — build and defend a grid-approximation analysis of real data end-to-end (`code`,
   once the Pyodide runner exists); plus a personal calibration report from the `estimate` log.
 - **ml** — diagnose a deliberately broken pipeline (leakage, imbalance, bad baseline) from evidence.
+- **cog** — design a blackboard-style agent harness for a concrete task; defend the
+  knowledge-source decomposition and control policy against the classic architectures.
 
 ## Pacing intent
 

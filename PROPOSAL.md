@@ -4,7 +4,10 @@
 (Phase 1: de-Bend reframe, `numeric` + `estimate` answer types, "Go deeper" resources, one-tap
 difficulty rating, outcome logging. Phase 2: multi-track architecture — per-track curricula,
 URLs, progress (v3 record), resume cards, per-track runbook with buffer 8 — and the Bayes track
-launched with lessons 1–8). Phases 3–4 not started.*
+launched with lessons 1–8). 2026-07-03: `ml` activated early (drafted spine in Part 3) and a
+`cog` track (cognitive science & AI architectures — Hearsay-II blackboards, ACT-R/SOAR, through
+modern agent harnesses) added beyond the original proposal; both seeded and live. Phase 3
+(widgets/Pyodide/labs) and Phase 4's adaptivity work not started.*
 
 This proposes the next evolution of the daily-learning-puzzles system, addressing four things:
 
