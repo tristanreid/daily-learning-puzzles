@@ -44,8 +44,8 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 - [x] B6 Deriving Bayes' theorem from the joint (it's just the multiplication rule twice) — `numeric`
 - [x] B7 The rare-disease test via natural frequencies; base-rate neglect — `numeric`
 - [x] B8 P(A|B) ≠ P(B|A): prosecutor's fallacy drills — `mcq`
-- [ ] B9 Odds form: posterior odds = prior odds × likelihood ratio — `numeric`
-- [ ] B10 Sequential evidence: two tests, compounding likelihood ratios; when compounding is
+- [x] B9 Odds form: posterior odds = prior odds × likelihood ratio — `numeric`
+- [x] B10 Sequential evidence: two tests, compounding likelihood ratios; when compounding is
       legitimate (conditional independence) — `numeric`
 - [ ] B11 Calibration seed: first estimation drills; what a 90% interval commits you to — `estimate`
 
@@ -85,5 +85,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 8`
+`last_generated_lesson: 10`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)

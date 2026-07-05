@@ -37,17 +37,17 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 - [x] M1 What "learning" means here: choose a function family, score it with a loss, search — `mcq`
 - [x] M2 Memorization masquerades as skill: train vs test error, and the split that exposes it — `numeric`
 - [x] M3 Overfitting by hand: model capacity vs data, the U-shaped test curve — `mcq`
-- [ ] M4 Baselines: majority class, the mean, "predict yesterday" — and how often they win — `numeric`
+- [x] M4 Baselines: majority class, the mean, "predict yesterday" — and how often they win — `numeric`
 
 ### Stage 1 — Linear models & gradient descent
-- [ ] Linear regression as the simplest fit; what the coefficients do and don't mean
-- [ ] Loss surfaces; gradient descent as rolling downhill; learning rate pathologies
-- [ ] Logistic regression: a linear model that outputs calibrated probabilities
-- [ ] Regularization: penalizing complexity (and its Bayesian reading as a prior)
+- [x] Linear regression as the simplest fit; what the coefficients do and don't mean
+- [x] Loss surfaces; gradient descent as rolling downhill; learning rate pathologies
+- [x] Logistic regression: a linear model that outputs calibrated probabilities
+- [x] Regularization: penalizing complexity (and its Bayesian reading as a prior)
 
 ### Stage 2 — Trees & ensembles
-- [ ] Decision trees: axis-aligned cuts, greedy splitting, why single trees overfit
-- [ ] Bagging & random forests: averaging kills variance
+- [x] Decision trees: axis-aligned cuts, greedy splitting, why single trees overfit
+- [x] Bagging & random forests: averaging kills variance
 - [ ] Boosting: stacking weak learners on residuals kills bias
 - [ ] Feature importance skepticism: what "important" actually measures
 
@@ -80,5 +80,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 3`
+`last_generated_lesson: 10`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)

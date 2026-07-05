@@ -47,18 +47,18 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 ### Stage 1 — Blackboard architectures  ← the Hearsay-II payoff
 - [x] C4 The blackboard idea: shared hypothesis space, independent knowledge sources,
       opportunistic control — why Hearsay-II needed it for speech — `mcq`
-- [ ] C5 Hearsay-II anatomy: hypothesis levels (segment→syllable→word→phrase), bidirectional
+- [x] C5 Hearsay-II anatomy: hypothesis levels (segment→syllable→word→phrase), bidirectional
       inference, islands of certainty — `mcq`
-- [ ] C6 Control: the agenda, scheduling knowledge sources, focus of attention; BB1's control
+- [x] C6 Control: the agenda, scheduling knowledge sources, focus of attention; BB1's control
       blackboard — `numeric` (score an agenda) or `mcq`
-- [ ] C7 When blackboards beat pipelines (and when they don't); blackboard vs message-passing —
+- [x] C7 When blackboards beat pipelines (and when they don't); blackboard vs message-passing —
       `reveal` (design exercise)
-- [ ] C8 Blackboards now: multi-agent LLM harnesses, shared scratchpads, tool results as
+- [x] C8 Blackboards now: multi-agent LLM harnesses, shared scratchpads, tool results as
       hypotheses; what carries over and what changed — `reveal`
 
 ### Stage 2 — Integrated cognitive architectures
-- [ ] ACT-R I: declarative vs procedural memory; chunks with activation
-- [ ] ACT-R II: spreading activation, base-level decay; why forgetting is rational
+- [x] ACT-R I: declarative vs procedural memory; chunks with activation
+- [x] ACT-R II: spreading activation, base-level decay; why forgetting is rational
 - [ ] SOAR I: problem spaces, universal subgoaling, impasses
 - [ ] SOAR II: chunking as learning; comparing ACT-R and SOAR design bets
 - [ ] What these architectures predict about humans (timing, errors) — and how well they do
@@ -97,5 +97,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 4`
+`last_generated_lesson: 10`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)
