@@ -47,11 +47,11 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 - [x] B9 Odds form: posterior odds = prior odds × likelihood ratio — `numeric`
 - [x] B10 Sequential evidence: two tests, compounding likelihood ratios; when compounding is
       legitimate (conditional independence) — `numeric`
-- [ ] B11 Calibration seed: first estimation drills; what a 90% interval commits you to — `estimate`
+- [x] B11 Calibration seed: first estimation drills; what a 90% interval commits you to — `estimate`
 
 ### Stage 2 — Distributions as beliefs
-- [ ] Distributions as answer sheets: pmf/pdf as "plausibility per value"
-- [ ] The binomial likelihood: what data says about a rate
+- [x] B12 Distributions as answer sheets: pmf/pdf as "plausibility per value"
+- [x] B13 The binomial likelihood: what data says about a rate
 - [ ] Priors: uniform, informative, and what "letting the data speak" really means
 - [ ] Beta-binomial updating: posterior = prior counts + observed counts
 - [ ] Watching the posterior sharpen; how much one observation moves you
@@ -85,5 +85,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 10`
+`last_generated_lesson: 13`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)

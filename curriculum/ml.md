@@ -48,12 +48,12 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 ### Stage 2 — Trees & ensembles
 - [x] Decision trees: axis-aligned cuts, greedy splitting, why single trees overfit
 - [x] Bagging & random forests: averaging kills variance
-- [ ] Boosting: stacking weak learners on residuals kills bias
-- [ ] Feature importance skepticism: what "important" actually measures
+- [x] M11 Boosting: stacking weak learners on residuals kills bias
+- [x] M12 Feature importance skepticism: what "important" actually measures
 
 ### Stage 3 — Evaluation as epistemics  ← deliberately before neural nets
-- [ ] Cross-validation: what it estimates, and how to leak through it
-- [ ] Leakage: the career-saving lesson (target leakage, temporal leakage, group leakage)
+- [x] M13 Cross-validation: what it estimates, and how to leak through it
+- [x] M14 Leakage: the career-saving lesson (target leakage, temporal leakage, group leakage)
 - [ ] Class imbalance: accuracy lies; precision/recall/PR curves
 - [ ] Calibration: when a 0.9 should mean 90% (bridge to the bayes track)
 - [ ] Distribution shift: the model meets a world that moved
@@ -80,5 +80,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 10`
+`last_generated_lesson: 14`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)

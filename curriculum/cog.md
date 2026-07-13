@@ -59,9 +59,9 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 ### Stage 2 — Integrated cognitive architectures
 - [x] ACT-R I: declarative vs procedural memory; chunks with activation
 - [x] ACT-R II: spreading activation, base-level decay; why forgetting is rational
-- [ ] SOAR I: problem spaces, universal subgoaling, impasses
-- [ ] SOAR II: chunking as learning; comparing ACT-R and SOAR design bets
-- [ ] What these architectures predict about humans (timing, errors) — and how well they do
+- [x] C11 SOAR I: problem spaces, universal subgoaling, impasses
+- [x] C12 SOAR II: chunking as learning; comparing ACT-R and SOAR design bets
+- [x] C13 What these architectures predict about humans (timing, errors) — and how well they do
 
 ### Stage 3 — Human memory & attention
 - [ ] Encoding vs retrieval; recognition vs recall; retrieval practice (why these puzzles quiz you)
@@ -97,5 +97,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 10`
+`last_generated_lesson: 13`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)
