@@ -52,9 +52,9 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 ### Stage 2 — Distributions as beliefs
 - [x] B12 Distributions as answer sheets: pmf/pdf as "plausibility per value"
 - [x] B13 The binomial likelihood: what data says about a rate
-- [ ] Priors: uniform, informative, and what "letting the data speak" really means
-- [ ] Beta-binomial updating: posterior = prior counts + observed counts
-- [ ] Watching the posterior sharpen; how much one observation moves you
+- [x] B14 Priors: uniform, informative, and what "letting the data speak" really means
+- [x] B15 Beta-binomial updating: posterior = prior counts + observed counts
+- [x] B16 Watching the posterior sharpen; how much one observation moves you
 - [ ] Posterior predictive: what do you expect *next*?
 
 ### Stage 3 — Sequential updating & conjugacy
@@ -85,5 +85,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 13`
+`last_generated_lesson: 16`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)

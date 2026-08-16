@@ -64,16 +64,16 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 - [x] C13 What these architectures predict about humans (timing, errors) — and how well they do
 
 ### Stage 3 — Human memory & attention
-- [ ] Encoding vs retrieval; recognition vs recall; retrieval practice (why these puzzles quiz you)
-- [ ] Spreading activation & priming (the psychology ACT-R formalized)
-- [ ] Attention as selection: dichotic listening, inattentional blindness, the binding problem
-- [ ] Long-term memory systems: episodic vs semantic vs procedural
+- [x] C14 Encoding vs retrieval; recognition vs recall; retrieval practice (why these puzzles quiz you)
+- [x] C15 Spreading activation & priming (the psychology ACT-R formalized)
+- [x] C16 Attention as selection: dichotic listening, inattentional blindness, the binding problem
+- [x] C17 Long-term memory systems: episodic vs semantic vs procedural
 
 ### Stage 4 — Learning & expertise
-- [ ] The power law of practice; what gets faster and what doesn't
-- [ ] Expertise as chunking + retrieval (de Groot's chess studies, Chase & Simon)
-- [ ] Deliberate practice and its limits; transfer (and its scarcity)
-- [ ] Spacing & interleaving (the science this whole puzzle system is built on)
+- [x] C18 The power law of practice; what gets faster and what doesn't
+- [x] C19 Expertise as chunking + retrieval (de Groot's chess studies, Chase & Simon)
+- [x] C20 Deliberate practice and its limits; transfer (and its scarcity)
+- [x] C21 Spacing & interleaving (the science this whole puzzle system is built on)
 
 ### Stage 5 — Judgment & bounded rationality
 - [ ] Satisficing (Simon): why real agents don't optimize
@@ -97,5 +97,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 13`
+`last_generated_lesson: 21`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)
