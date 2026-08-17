@@ -54,8 +54,8 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 ### Stage 3 — Evaluation as epistemics  ← deliberately before neural nets
 - [x] M13 Cross-validation: what it estimates, and how to leak through it
 - [x] M14 Leakage: the career-saving lesson (target leakage, temporal leakage, group leakage)
-- [ ] Class imbalance: accuracy lies; precision/recall/PR curves
-- [ ] Calibration: when a 0.9 should mean 90% (bridge to the bayes track)
+- [x] M15 Class imbalance: accuracy lies; precision/recall/PR curves
+- [x] M16 Calibration: when a 0.9 should mean 90% (bridge to the bayes track)
 - [ ] Distribution shift: the model meets a world that moved
 
 ### Stage 4 — Neural networks
@@ -80,5 +80,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 14`
+`last_generated_lesson: 16`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)
