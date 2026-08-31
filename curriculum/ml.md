@@ -56,12 +56,12 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 - [x] M14 Leakage: the career-saving lesson (target leakage, temporal leakage, group leakage)
 - [x] M15 Class imbalance: accuracy lies; precision/recall/PR curves
 - [x] M16 Calibration: when a 0.9 should mean 90% (bridge to the bayes track)
-- [ ] Distribution shift: the model meets a world that moved
+- [x] M17 Distribution shift: the model meets a world that moved
 
 ### Stage 4 — Neural networks
-- [ ] The perceptron → depth: composing simple functions buys expressiveness
-- [ ] Backpropagation: the chain rule, organized well
-- [ ] Why training works anyway: SGD, overparameterization, early stopping
+- [x] M18 The perceptron → depth: composing simple functions buys expressiveness
+- [x] M19 Backpropagation: the chain rule, organized well
+- [x] M20 Why training works anyway: SGD, overparameterization, early stopping
 - [ ] What convolutions and attention each assume about structure
 
 ### Stage 5 — Embeddings & similarity
@@ -80,5 +80,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 16`
+`last_generated_lesson: 20`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)

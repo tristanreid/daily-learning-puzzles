@@ -55,17 +55,17 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 - [x] B14 Priors: uniform, informative, and what "letting the data speak" really means
 - [x] B15 Beta-binomial updating: posterior = prior counts + observed counts
 - [x] B16 Watching the posterior sharpen; how much one observation moves you
-- [ ] Posterior predictive: what do you expect *next*?
+- [x] B17 Posterior predictive: what do you expect *next*?
 
 ### Stage 3 — Sequential updating & conjugacy
-- [ ] Yesterday's posterior is today's prior (order of evidence doesn't matter — when it doesn't)
-- [ ] Conjugacy as "the update has a closed form"; beta-binomial and normal-normal
-- [ ] When conjugacy breaks and why that's fine (grid thinking preview)
+- [x] B18 Yesterday's posterior is today's prior (order of evidence doesn't matter — when it doesn't)
+- [x] B19 Conjugacy as "the update has a closed form"; beta-binomial and normal-normal
+- [x] B20 When conjugacy breaks and why that's fine (grid thinking preview)
 
 ### Stage 4 — Estimation & decisions
-- [ ] Point estimates are loss-function choices (mean/median/mode ↔ quadratic/absolute/0-1 loss)
-- [ ] Credible intervals vs confidence intervals (what each actually claims)
-- [ ] Expected-value decisions; when the posterior says "don't decide yet"
+- [x] B21 Point estimates are loss-function choices (mean/median/mode ↔ quadratic/absolute/0-1 loss)
+- [x] B22 Credible intervals vs confidence intervals (what each actually claims)
+- [x] B23 Expected-value decisions; when the posterior says "don't decide yet"
 
 ### Stage 5 — Computation
 - [ ] Grid approximation by hand (the honest workhorse) — `code` when available
@@ -85,5 +85,5 @@ Same as the shared rules in `../generation/generation-prompt.md`, plus track-spe
 
 ## Generation marker
 
-`last_generated_lesson: 16`
+`last_generated_lesson: 23`
 (The generator updates this after each run. New lessons continue the next unchecked item, in order.)
