@@ -9,8 +9,9 @@ ask which track before doing anything else.
 1. Obtain the progress token. It is **not** in this repo (the repo is public). Read
    `/Users/tristanreid/.claude/scheduled-tasks/learn-puzzle-generator/SKILL.md` and take the value
    of `LEARN_TOKEN`. Use it only in the `curl` call the examiner prompt describes. Never write it
-   into any file, report, or feedback entry. If the file is missing, proceed without the token: the
-   examiner prompt says how.
+   into any file, report, or feedback entry. If the file is missing (for example on another
+   machine), proceed without the token: the examiner prompt says how, and it also says how to read
+   lessons from the live site when the local site repo is absent.
 2. Read `assessment/examiner-prompt.md` in this repo and follow it exactly, with `<track>` set to
    the argument. The prompt covers preparation, the exam itself, the debrief, and writing the
    report to `assessment/reports/<track>/<YYYY-MM-DD>.md` per `assessment/report-schema.md`.

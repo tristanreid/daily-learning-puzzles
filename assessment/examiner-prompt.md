@@ -20,8 +20,16 @@ Arguments: `<track>` (`fp`, `bayes`, `cog`, `ml`) or `all`.
   Use this the first time, and any time the goal is "where am I, broadly" rather than depth.
 
 Paths:
-- REPO = `/Users/tristanreid/projects/github.com/tristanreid/daily-learning-puzzles`
+- REPO = this repository (the directory containing `assessment/`), normally
+  `/Users/tristanreid/projects/github.com/tristanreid/daily-learning-puzzles`
 - SITE = `/Users/tristanreid/projects/github.com/tristanreid/tristancode-workspace`
+
+Running away from the usual machine: if SITE is not present, read the completed lessons from the
+live site instead — `https://tristancode.com/learn/<track>/NNNN-puzzle/` and
+`https://tristancode.com/learn/<track>/NNNN-solution/` (lesson numbers zero-padded to four
+digits); the track index at `https://tristancode.com/learn/<track>/` lists them. If the token is
+unavailable, ask the learner for their last completed lesson number per track and skip the event
+analysis in step 4. Everything else works from REPO alone.
 
 ## Phase 0 — Preparation (silent; do not narrate this to the learner)
 
